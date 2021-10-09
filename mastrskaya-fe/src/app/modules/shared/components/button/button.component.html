@@ -1,0 +1,13 @@
+<button
+    *ngIf="kind === _kinds.button"
+    class="button {{classList}}"
+    [type]="kind"
+    [textContent]="'test'"
+></button>
+
+<a
+    *ngIf="kind === _kinds.link"
+    class="button-link {{classList}}"
+    [text]="'test-link'"
+    (click)="test()"
+></a>

@@ -1,0 +1,21 @@
+<header class="header">
+
+  <div class="header__info"></div>
+  <div class="header__logo"></div>
+  <nav>
+    <ul class="header__categories">
+      <li *ngFor="let item of _categories"
+          class="header__category"
+          routerLinkActive="_active"
+          [routerLinkActiveOptions]="{exact: true}"
+          [routerLink]="[item.id]"
+      >
+        <a class="header__category-link"
+        >
+          {{item.label}}
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</header>

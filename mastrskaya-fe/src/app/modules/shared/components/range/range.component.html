@@ -1,0 +1,18 @@
+<div class="range__wrapper">
+  <div class="range__wrapper-value">
+
+    <div *ngIf="value"
+         class="range__value"
+         [ngStyle]="{'left': _valueLeft}"
+    >{{value}}</div>
+
+    <input #rangeInput
+         class="range"
+         type="range"
+         [min]="min"
+         [max]="max"
+         [step]="step"
+         [(ngModel)]="value"
+         (ngModelChange)="_change()">
+  </div>
+</div>
